@@ -20,8 +20,9 @@ public class UserDetailsImpl implements UserDetails {
 
 
     private static final long serialVersionUID = 1L;
+    private final String name;
     private Long id ;
-    private String name ;
+    private String username ;
     private String email;
 
     private String password ;
