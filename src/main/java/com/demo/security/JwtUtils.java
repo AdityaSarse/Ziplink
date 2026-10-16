@@ -1,21 +1,20 @@
-package security;
+package com.demo.security;
 
-import io.jsonwebtoken.JwtBuilder;
 import io.jsonwebtoken.JwtException;
-import io.jsonwebtoken.JwtParser;
 import io.jsonwebtoken.Jwts;
 import io.jsonwebtoken.io.Decoders;
 import io.jsonwebtoken.security.Keys;
 import jakarta.servlet.http.HttpServletRequest;
 import org.springframework.beans.factory.annotation.Value;
-import service.UserDetailsImpl;
+import org.springframework.stereotype.Component;
+import com.demo.service.UserDetailsImpl;
 
 import javax.crypto.SecretKey;
 import java.security.Key;
-import java.util.Base64;
 import java.util.Date;
 import java.util.stream.Collectors;
 
+@Component
 public class JwtUtils   {
     //Authorization   - > Bearer  <token>
     @Value("${jwt.secret}")
